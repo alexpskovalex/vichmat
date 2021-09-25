@@ -1,5 +1,4 @@
 import math as m
-e=3
 accuracity=5
 e=10**(-accuracity)
 a=0
@@ -9,7 +8,7 @@ n=1
 def sobaka(x):
     return m.exp(x)*m.cos(x)**2
 
-def simpson(n):
+def simpson(n,h):
     S=0
     for i in range(1,n):
         if i % 2 != 0:#нужно вставлять каждое нечетное значение
@@ -28,7 +27,7 @@ while True:
     n*=2
     h=(b-a)/n
     S2=S1
-    S1=simpson(n)
+    S1=simpson(n,h)
     count+=1
     if abs(S1-S2)<e:
         break
