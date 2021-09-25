@@ -26,10 +26,10 @@ count=0
 S1=simpson(n)
 while True:
     n*=2
+    h=(b-a)/n
     S2=S1
     S1=simpson(n)
     count+=1
-    if  not abs(S1-S2)<e:
+    if abs(S1-S2)<e:
         break
-print (count)
-print(x)
+print ('значение интеграла: {0:5.{1}f}, итераций: {2}, разбиений:{3}'.format(S2,accuracity,count,n))
