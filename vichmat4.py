@@ -22,7 +22,7 @@ def simpson(n,h):
 h=(b-a)/n
 x=[a+0*h,a+n*h]
 count=0
-S1=simpson(n)
+S1=simpson(n,h)
 while True:
     n*=2
     h=(b-a)/n
