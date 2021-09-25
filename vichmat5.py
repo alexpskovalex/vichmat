@@ -3,7 +3,7 @@ accuracity=3
 interval=20
 a=0.2
 b=8
-eps=10**(-accuracity-1)
+eps=10**(-accuracity)
 
 def sobaka(x):
     return x**(0.3)*(m.log(1.1*x)+x)
@@ -33,6 +33,8 @@ def simpson(b,e):
 
 def poisk_bebrenka(c,d):
     e=0.2
+    count=0
+    print(' # |   x   |   f(x)  ')
     while True:
         x=(c+d)/2
 
@@ -41,10 +43,14 @@ def poisk_bebrenka(c,d):
         else:
             c=x
         e/=2
-        print('x:{0:9.{1}f}, f(x):{2:7.{1}f}'.format(x,accuracity,simpson(x,e)))
+        count+=1
+        print('{3:2} | {0:5.{1}f} | {2:7.{1}f}'.format(x,accuracity,simpson(x,e),count))
         # print (simpson(x,e))
         if  d-c<eps:
             break
+    print('------------------')
+    print('ответ: x={0:5.{1}f}+-{4}, f(x)={2:7.{1}f}, итераций:{3}'.format(x,accuracity,simpson(x,e),count,eps))
+    
     
 
 poisk_bebrenka(a,b)
