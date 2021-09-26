@@ -5,7 +5,6 @@ a = 0.2
 b = 8
 eps = 10**(-accuracity)
 
-
 def sobaka(x):
     return x**(0.3) * (m.log(1.1 * x) + x)
     # return (m.log(0.1 * x) + m.exp(0.4 * x)) / (m.sin(x) + 1.5)
@@ -32,7 +31,6 @@ def simpson(b, e):
             break
     return S2
 
-
 def poisk_bebrenka(c, d):
     e = 0.2
     count = 0
@@ -45,14 +43,11 @@ def poisk_bebrenka(c, d):
             c = x
         e /= 2
         count += 1
-        print('{3:2} | {0:5.{1}f} | {2:7.{1}f}'.format(x, accuracity,
-                                                       simpson(x, e), count))
+        print('{3:2} | {0:5.{1}f} | {2:7.{1}f}'.format(x, accuracity, simpson(x, e), count))
         # print (simpson(x,e))
         if d - c < eps:
             break
     print('------------------')
-    print('ответ: x={0:5.{1}f}+-{4}, f(x)={2:7.{1}f}, итераций:{3}'.format(
-        x, accuracity, simpson(x, e), count, eps))
-
+    print('ответ: x={0:5.{1}f}+-{4}, f(x)={2:7.{1}f}, итераций:{3}'.format(x, accuracity, simpson(x, e), count, eps))
 
 poisk_bebrenka(a, b)
