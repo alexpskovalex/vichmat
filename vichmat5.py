@@ -1,6 +1,6 @@
 import math as m
 
-accuracity = 3
+accuracity = 7
 a = 0.2
 b = 8
 eps = 10**(-accuracity)
@@ -34,7 +34,7 @@ def simpson(b, e):
 def poisk_bebrenka(c, d):
     e = 0.2
     count = 0
-    print(' # |   x   |   f(x)  ')
+    print(' # |     x     |    f(x)  ')
     while True:
         x = (c + d) / 2
         if simpson(x, e) * simpson(c, e) < 0:

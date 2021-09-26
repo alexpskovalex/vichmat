@@ -1,6 +1,6 @@
 import math as m
 
-accuracity = 5
+accuracity = 7
 e = 10**(-accuracity)
 a = 0
 b = m.pi
