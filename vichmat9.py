@@ -10,7 +10,7 @@ for i in range(m + 1):
     for j in range(m + 1):
         sum = 0
         for k in range(n):
-            sum += xg[k]**((i + 1) + (j + 1) - 1)
+            sum += xg[k]**((i + 1) + (j + 1)-2)
         a[i].append(sum)
 for i in range(m + 1):
     sum = 0
@@ -60,4 +60,4 @@ alpha = gaus(a, b)
 print(alpha)
 p = P(alpha, xg)
 print(p)
-print(xg)
+print(yg)
