@@ -1,6 +1,6 @@
 import math
 
-e = 7
+e = 3
 interval = 20
 xmax = 5
 xmin = 1

@@ -22,9 +22,7 @@ def solve(x, counter):
     print('иксы:  {0:12.7f} {1:12.7f} {2:12.7f} {3:12.7f}'.format(x[0], x[1], x[2], x[3]))
     print('игреки {0:12.7f} {1:12.7f} {2:12.7f} {3:12.7f}'.format(y[0], y[1], y[2], y[3]))
     print('дельты {0:12.8f} {1:12.8f} {2:12.8f} {3:12.8f}'.format(delta[0], delta[1], delta[2], delta[3]))
-    # # print (max(delta))
     if (max(delta) < eps) or (counter == 100):
-    # if  (counter == 100):
         print('---------')
         print('ответ {0:8.5f} {1:8.5f} {2:8.5f} {3:8.5f}'.format(y[0], y[1], y[2], y[3]))
         return
@@ -43,14 +41,9 @@ def schodimost():
     if skhodimost > 1:
         print('a={0:5.3f}, условие сходимости не соблюдено'.format(skhodimost))
         return False
-        # for i in range(0, n):
-        #     b[i] /= (skhodimost+1)
-        #     for j in range(0, n):
-        #         a[i][j] /= (skhodimost+1)
-        # schodimost()
     else:
         return True
-    # print('a={0:5.3f}, условие соблюдено'.format(skhodimost))
+
 
 def printMatrix(msg):
     print(msg + ':')
@@ -67,15 +60,8 @@ for i in range(0, n):
     b[i] /= a[i][i]
     a[i][i] = 0
 printMatrix('после преобразований')
-# schodimost()
-# printMatrix('после преобразований2')
 if schodimost():
     for i in range(0, n):
         x.append(-1000)
 
     solve(x, counter)
-# for i in range(0, n):
-#     n=0
-#     for j in range(0, n):
-#         n+=x[j]*atest[i][j]
-#     print('b{0} = {1:7.5f}, b настоящее {2}'.format(i,n,btest[i]))

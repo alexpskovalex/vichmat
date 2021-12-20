@@ -1,6 +1,6 @@
 import math as m
 
-accuracity = 7
+accuracity = 3
 a = 0.2
 b = 8
 eps = 10**(-accuracity)

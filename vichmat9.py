@@ -4,7 +4,6 @@ n = len(xg)
 m = 4
 a = []
 b = []
-# n=
 for i in range(m + 1):
     a.append([])
     for j in range(m + 1):
@@ -26,7 +25,7 @@ def printMatrix(msg):
 
 def gaus(a, b):
     n = len(b)
-    x = b
+    x = [0,0,0,0,0]
     for s in range(0, n):
         for i in range(s + 1, n):
             k = a[i][s] / a[s][s]
@@ -57,7 +56,9 @@ def P(a, x):
 
 printMatrix("test")
 alpha = gaus(a, b)
-print(alpha)
 p = P(alpha, xg)
-print(p)
-print(yg)
+sumn=0
+for i in range(n):
+    print('x= {1:3.2f} дано {0:3.2f} получилось {2:3.2f} невязка {3:3.2f} '.format(yg[i],xg[i],p[i],p[i]-yg[i]  ) )
+    sumn+=(p[i]-yg[i])**2 
+print('итого нвязка {0:5.3f}'.format(sumn))

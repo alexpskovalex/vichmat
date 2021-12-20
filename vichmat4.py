@@ -2,14 +2,16 @@ import math as m
 
 accuracity = 7
 e = 10**(-accuracity)
-a = 0
-b = m.pi
+# a = 0
+# b = m.pi
+a=1
+b=2.7
 n = 1
 
 
 def sobaka(x):
-    return m.exp(x) * m.cos(x)**2
-
+    # return m.exp(x) * m.cos(x)**2
+    return (x*m.log(x))**2
 
 def simpson(n, h):
     S = 0
